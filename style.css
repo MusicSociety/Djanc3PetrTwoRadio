@@ -1,93 +1,75 @@
+/* Reset di base per il body */
 body {
-    margin: 0;
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .partners {
-    display: flex;
-    justify-content: space-between;
-  
-  }
-  
-  .partners img {
-    width: 250px;
-    height: 75px
-  }
-  
-  .video-area {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  video {
-    width: 110%;
-    margin-top: -59%;
-    margin-bottom: 10%;
-    margin-left: -5%;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
 
-  }
-  
-  .banner {
-    margin-top: 20px;
-    width: 100%;
-  }
-  
-  .push-listen {
-    margin-top: -30px;
-    width: 400px;
-  }
-  
-  .play-button-container {
-    margin: 20px;
-  }
-  
-  .play-button-container img {
-    width: 300px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    margin-top: -50px;
-  }
-  
-  .play-button-container img:hover {
-    transform: scale(1.1);
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -25%;
-  }
-  
-  .menu img {
-    width: 200px;
-  }
-  
-  .glow {
-    box-shadow: 0 0 20px 5px red;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease-in-out;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .Windows
-  {
-    display: flex;
-    justify-content: space-between;
-    
-  }
+/* Push to Listen sopra al bottone */
+.push-listen {
+  position: relative;
+  width: 400px;
+  left: 27%;
+  top: 30px;
+}
 
-  .Q
-  {
-    border: solid red 2px;
-    width: 240px;
-    height: 330px;
-    border-radius: 5%
-  }
+/* Contenitore principale per il video e il pulsante play */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-area {
+  max-width: 600px;
+  margin-right: 20px; /* Distanza tra il video e il pulsante play */
+}
+
+.video-area video {
+  width: 100%;
+  position: relative;
+  right: 100px;
+  bottom: 100px;
+  /* Adatta il video senza deformarlo */
+}
+
+.play-button-container img {
+  width: 200px; /* Puoi regolare la dimensione del tasto */
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  bottom: 40px; /* Posiziona il pulsante sopra il video */
+}
+
+.play-button-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Aggiungere l'effetto glow al pulsante play */
+.glow {
+  box-shadow: 0 0 20px 5px red; 
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Aggiungere l'effetto glow al pulsante play quando si passa il mouse */
+.play-button-container img:hover.glow {
+  box-shadow: 0 0 30px 10px red;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  position: relative;
+  top: -65px;  /* Sposta l'immagine verso l'alto */
+}
