@@ -1,64 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jdancepetr2radio.altervista.org</title>
+    <title>JDANC3 PETR-TWO RADIO</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div class="container">
-      <!-- Our Partners -->
-      <div class="partners">
-        <img src="Images/OurPartner.png" alt="Our Partner" />
-        <img src="Images/OurPartner.png" alt="Our Partner" />
-      </div>
-
-      <!--banner partner-->
-      <div class="Windows">
-        <div class="Q"></div>
-
-        <div class="Q"></div>
-      </div>
-
-      <!-- Video turntable -->
-      <div class="video-area">
-        <video id="mainVideo" src="media/main.mp4" loop muted></video>
-      </div>
-
-      <!-- Banner -->
-      <img
-        src="Images/Banner.png"
-        alt="One Planet One Station"
-        class="banner"
-      />
-
-      <!-- Push to Listen -->
+      <!-- Push to Listen sopra al bottone -->
       <img
         src="Images/PushToListen.png"
         alt="Push to Listen"
         class="push-listen"
       />
 
-      <!-- Play Button -->
-      <div class="play-button-container">
-        <img src="Images/button.png" alt="Play" id="playButton" />
+      <!-- Video and Play Button Container -->
+      <div class="media-container">
+        <!-- Video turntable -->
+        <div class="video-area">
+          <video id="mainVideo" src="media/main.mp4" loop muted></video>
+        </div>
+
+        <!-- Play Button -->
+        <div class="play-button-container">
+          <img src="Images/button.png" alt="Play" id="playButton" />
+        </div>
       </div>
 
       <audio id="audioPlayer" preload="auto" loop>
-        <source src="http://188.208.104.189:8045/listen.pls" type="audio/mpeg" />
+        <source src="http://188.208.104.189:8045/live" type="audio/mpeg" />
       </audio>
-      
+    </div>
 
-      <!-- Bottom Menu -->
-      <div class="menu">
-        <div class="left-menu">
-          <img src="Images/scheda2.jpg" alt="Menu Sinistra" />
-        </div>
-        <div class="right-menu">
-          <img src="Images/scheda1.jpg" alt="Menu Destra" />
-        </div>
-      </div>
+    <div class="banner">
+      <img
+        src="Images/Banner.png"
+        alt="JDANC3 PETR-TWO RADIO"
+        class="banner-image"
+      />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
     </div>
 
     <script src="script.js"></script>
