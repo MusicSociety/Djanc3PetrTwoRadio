@@ -9,15 +9,15 @@ playButton.addEventListener('click', () => {
     video.play();
     audioPlayer.play();
 
-    // Aggiungi l'effetto visivo al pulsante
+    // Aggiungi l'effetto visivo al pulsante (box-shadow)
     playButton.classList.add('glow');
-    setTimeout(() => {
-      playButton.classList.remove('glow');
-    }, 1000);
   } else {
     // Se la musica è in riproduzione, fermala
     video.pause();
     audioPlayer.pause();
+
+    // Rimuovi l'effetto visivo al pulsante (box-shadow)
+    playButton.classList.remove('glow');
   }
 });
 
