@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JDANC3 PETR-TWO RADIO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Push to Listen sopra al bottone -->
+      <img
+        src="Images/PushToListen.png"
+        alt="Push to Listen"
+        class="push-listen"
+      />
+
+      <!-- Video and Play Button Container -->
+      <div class="media-container">
+        <!-- Video turntable -->
+        <div class="video-area">
+          <video id="mainVideo" src="media/main.mp4" loop muted></video>
+        </div>
+
+        <!-- Play Button -->
+        <div class="play-button-container">
+          <img src="Images/button.png" alt="Play" id="playButton" />
+        </div>
+      </div>
+
+      <audio id="audioPlayer" preload="auto" loop>
+        <source src="  " type="audio/mpeg" />  <!-- INCOLLARE LINK AUDIO ESEMPIO: <source src="HTTP//:LINK-AUDIO/LIVE" type="audio/mpeg"  -->
+      </audio>
+    </div>
+
+    <div class="banner">
+      <img
+        src="Images/Banner.png"
+        alt="JDANC3 PETR-TWO RADIO"
+        class="banner-image"
+      />
+    </div>
+
+    <div class="container-sponsors">
+      <img
+        src="Images/microphone-logo.jpg"
+        alt="microphone-logo"
+        class="microphone-logo"
+      />
+
+      <img 
+      src="Images/sponsor.jpg" 
+      alt="sponsor" 
+      class="restaurant-sponsor" 
+      />
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
