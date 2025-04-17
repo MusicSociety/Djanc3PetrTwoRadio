@@ -1,11 +1,15 @@
 /* Reset di base per il body */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
 }
+
 
 .container {
   max-width: 1200px;
@@ -18,7 +22,7 @@ body {
   position: relative;
   width: 400px;
   left: 27%;
-  top: 30px;
+  
 }
 
 /* Contenitore principale per il video e il pulsante play */
@@ -38,7 +42,7 @@ body {
   width: 100%;
   position: relative;
   right: 100px;
-  bottom: 100px;
+  bottom: 150px;
   /* Adatta il video senza deformarlo */
 }
 
@@ -47,7 +51,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
   position: relative;
-  bottom: 40px; /* Posiziona il pulsante sopra il video */
+  bottom: 95px; /* Posiziona il pulsante sopra il video */
 }
 
 .play-button-container img:hover {
@@ -66,10 +70,49 @@ body {
   box-shadow: 0 0 30px 10px red;
 }
 
+
+.banner {
+  position: relative;
+  width: 98%;
+  height: auto;
+  margin-top: 0px;
+  margin-top: -180px; 
+}
+
 .banner-image {
   width: 100%;
   height: auto;
   margin-top: 0px;
   position: relative;
-  top: -65px;  /* Sposta l'immagine verso l'alto */
+  
+}
+
+.container-sponsors {
+  display: flex;
+  justify-content: space-between;
+  height: 102px;
+ 
+  width: 90%;
+  margin-left: 5%;
+}
+
+
+.restaurant-sponsor,
+.microphone-logo {
+
+  width: 15%; 
+  height: 50%;
+}
+
+.microphone-logo {
+  width: 15%;
+  height: 90%;
+  margin-top: 0px;
+  position: relative;
+  bottom: 15px;
+  
+}
+.restaurant-sponsor{
+  width: 14%;
+  height: 70%;
 }
