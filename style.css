@@ -19,121 +19,115 @@ html, body {
 /* Push to Listen sopra al bottone */
 .push-listen {
   position: relative;
-  width: 400px;
-  left: 27%;
+  max-width: 100%;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
-/* Contenitore principale per il video e il pulsante play */
+/* Contenitore principale per video e bottone */
 .media-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
   margin-top: 20px;
 }
 
 .video-area {
+  flex: 1 1 300px;
   max-width: 600px;
-  margin-right: 20px;
 }
 
 .video-area video {
   width: 100%;
-  position: relative;
-  right: 100px;
-  bottom: 150px;
   object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Pulsante play */
+.play-button-container {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .play-button-container img {
   width: 200px;
   cursor: pointer;
-  transition: transform 0.2s;
-  position: relative;
-  bottom: 95px;
+  transition: transform 0.2s, box-shadow 0.3s;
+  border-radius: 50%;
+}
+
+/* Effetto glow */
+.glow {
+  box-shadow: 0 0 20px 5px red;
 }
 
 .play-button-container img:hover {
   transform: scale(1.1);
 }
 
-/* Aggiungere l'effetto glow al pulsante play */
-.glow {
-  box-shadow: 0 0 20px 5px red;
-  border-radius: 50%;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
 .play-button-container img:hover.glow {
   box-shadow: 0 0 30px 10px red;
 }
 
+/* Banner */
 .banner {
-  position: relative;
-  width: 98%;
-  height: auto;
-  margin-top: -180px;
+  width: 100%;
+  margin-top: -100px;
 }
 
 .banner-image {
   width: 100%;
   height: auto;
-  position: relative;
 }
 
+/* Sponsors container */
 .container-sponsors {
   display: flex;
-  justify-content: space-between;
-  height: 102px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   width: 90%;
-  margin-left: 5%;
+  margin: 20px auto 0 auto;
+  gap: 20px;
 }
 
 .restaurant-sponsor,
 .microphone-logo2 {
-  width: 15%;
-  height: 50%;
+  flex: 0 1 120px;
+  max-width: 15%;
+  height: auto;
 }
 
 .microphone-logo2 {
-  width: 15%;
-  height: 90%;
-  margin-top: 0px;
+  margin-top: 0;
   position: relative;
   bottom: 15px;
 }
 
-.restaurant-sponsor {
-  width: 14%;
-  height: 70%;
-}
-
-/* Media query per schermi più piccoli */
+/* Responsive media query */
 @media (max-width: 768px) {
   .media-container {
     flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .video-area {
-    max-width: 100%;
-    margin-right: 0;
+    align-items: center;
   }
 
   .play-button-container img {
     width: 150px;
-    bottom: 60px;
   }
 
   .container-sponsors {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
   .restaurant-sponsor,
   .microphone-logo2 {
-    width: 50%;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 50%;
   }
 }
 
