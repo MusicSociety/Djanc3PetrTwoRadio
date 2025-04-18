@@ -10,7 +10,6 @@ html, body {
   text-align: center;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,7 +21,6 @@ html, body {
   position: relative;
   width: 400px;
   left: 27%;
-  
 }
 
 /* Contenitore principale per il video e il pulsante play */
@@ -35,7 +33,7 @@ html, body {
 
 .video-area {
   max-width: 600px;
-  margin-right: 20px; /* Distanza tra il video e il pulsante play */
+  margin-right: 20px;
 }
 
 .video-area video {
@@ -43,15 +41,15 @@ html, body {
   position: relative;
   right: 100px;
   bottom: 150px;
-  /* Adatta il video senza deformarlo */
+  object-fit: cover;
 }
 
 .play-button-container img {
-  width: 200px; /* Puoi regolare la dimensione del tasto */
+  width: 200px;
   cursor: pointer;
   transition: transform 0.2s;
   position: relative;
-  bottom: 95px; /* Posiziona il pulsante sopra il video */
+  bottom: 95px;
 }
 
 .play-button-container img:hover {
@@ -60,47 +58,39 @@ html, body {
 
 /* Aggiungere l'effetto glow al pulsante play */
 .glow {
-  box-shadow: 0 0 20px 5px red; 
+  box-shadow: 0 0 20px 5px red;
   border-radius: 50%;
   transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Aggiungere l'effetto glow al pulsante play quando si passa il mouse */
 .play-button-container img:hover.glow {
   box-shadow: 0 0 30px 10px red;
 }
-
 
 .banner {
   position: relative;
   width: 98%;
   height: auto;
-  margin-top: 0px;
-  margin-top: -180px; 
+  margin-top: -180px;
 }
 
 .banner-image {
   width: 100%;
   height: auto;
-  margin-top: 0px;
   position: relative;
-  
 }
 
 .container-sponsors {
   display: flex;
   justify-content: space-between;
   height: 102px;
- 
   width: 90%;
   margin-left: 5%;
 }
 
-
 .restaurant-sponsor,
 .microphone-logo2 {
-
-  width: 15%; 
+  width: 15%;
   height: 50%;
 }
 
@@ -110,12 +100,43 @@ html, body {
   margin-top: 0px;
   position: relative;
   bottom: 15px;
-  
 }
-.restaurant-sponsor{
+
+.restaurant-sponsor {
   width: 14%;
   height: 70%;
 }
+
+/* Media query per schermi più piccoli */
+@media (max-width: 768px) {
+  .media-container {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .video-area {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .play-button-container img {
+    width: 150px;
+    bottom: 60px;
+  }
+
+  .container-sponsors {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurant-sponsor,
+  .microphone-logo2 {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
 
 
 
