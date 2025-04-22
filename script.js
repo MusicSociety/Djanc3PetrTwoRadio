@@ -6,11 +6,19 @@ let videoStarted = false;
 
 // iOS workaround per sbloccare il contesto audio
 const unlockAudio = () => {
-  const silentAudio = new Audio();
-  silentAudio.play().catch(() => {}); // forza il contesto audio anche se fallisce
+  // Serve davvero solo una riproduzione "vuota" per sbloccare il contesto
+  audioPlayer.play().then(() => {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+  }).catch(() => {});
   document.removeEventListener('click', unlockAudio);
 };
 document.addEventListener('click', unlockAudio);
+
+video.addEventListener('ended', () => {
+  video.currentTime = 0;
+  video.play().catch(err => console.log("Loop error:", err));
+});
 
 playButton.addEventListener('click', () => {
   if (audioPlayer.paused) {
@@ -30,4 +38,8 @@ playButton.addEventListener('click', () => {
     playButton.classList.remove('glow');
   }
 });
+
+audioPlayer.load(); // forza Safari a preparare il flusso
+
+
 
