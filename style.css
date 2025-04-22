@@ -1,0 +1,234 @@
+/* Reset di base per il body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Push to Listen sopra al bottone */
+.push-listen {
+  position: relative;
+  width: 400px;
+  left: 27%;
+}
+
+/* Contenitore principale per il video e il pulsante play */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-area {
+  max-width: 600px;
+  margin-right: 20px; /* Distanza tra il video e il pulsante play */
+}
+
+.video-area video {
+  width: 100%;
+  position: relative;
+  right: 100px;
+  bottom: 150px;
+  /* Adatta il video senza deformarlo */
+}
+
+.play-button-container img {
+  width: 110px; /* Puoi regolare la dimensione del tasto */
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  bottom: 95px; /* Posiziona il pulsante sopra il video */
+}
+
+.play-button-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Aggiungere l'effetto glow al pulsante play */
+.glow {
+  box-shadow: 0 0 20px 5px red;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Aggiungere l'effetto glow al pulsante play quando si passa il mouse */
+.play-button-container img:hover.glow {
+  box-shadow: 0 0 30px 10px red;
+}
+
+.banner {
+  position: relative;
+  width: 98%;
+  height: auto;
+  margin-top: 0px;
+  margin-top: -180px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  position: relative;
+}
+
+.container-sponsors {
+  display: flex;
+  justify-content: space-between;
+  height: 102px;
+  width: 90%;
+  margin-left: 5%;
+  
+}
+
+.right-sponsor,
+.left-sponsor {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+ /* se dovessi aggiungere un altro sponsor rimuovere "display: none;" e commenti */
+
+  /*
+.center-sponsor {
+  border: 1px solid yellow; 
+  width: 25%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+  */
+
+.microphone-logo2 {
+  width: 125%;
+  height: 100%;
+  margin-top: 0px;
+  position: relative;
+  bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-sponsor {
+  width: 125%;
+  height: 95%;
+  position: relative;
+  bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.link-sponsor {
+  text-decoration: none;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+
+}
+
+.microphone-logo2:hover,
+.restaurant-sponsor:hover {
+  transform: scale(1.1);
+}
+
+/* nasconde VideoPlayer per gli utenti iphone che usano Safari */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+
+/* Responsive per (430px) */
+@media screen and (max-width: 430px) {
+
+
+  .push-listen {
+    width: 80%;
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 225px;
+  }
+
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .video-area {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .video-area video {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+  }
+
+  .play-button-container img {
+    width: 30%;
+    bottom: 0;
+    margin-top: 50px;
+  }
+
+  .banner {
+    margin-top: 10px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .container-sponsors {
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .right-sponsor,
+  .left-sponsor {
+    width: 60%;
+    height: auto;
+  }
+
+  .microphone-logo2,
+  .restaurant-sponsor {
+    width: 70%;
+    height: auto;
+    position: static;
+  }
+
+  .link-sponsor {
+    width: 100%;
+    height: auto;
+  }
+}
+
