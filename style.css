@@ -156,6 +156,28 @@ body {
   transform: scale(1.1);
 }
 
+.container-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.link-email {
+  text-decoration: none;
+  color: rgb(232, 237, 86);
+  font-size: 25px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.link-email:hover {
+  color: rgb(254, 0, 0);
+
+}
+
 
 
 /* Responsive per (430px) */
@@ -236,5 +258,16 @@ body {
     width: 100%;
     height: auto;
   }
+
+  .container-email {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .link-email {
+    font-size: 15px;
+  }
+ 
 }
 
