@@ -33,16 +33,23 @@ body {
 }
 
 .video-area {
-  max-width: 600px;
-  margin-right: 20px; /* Distanza tra il video e il pulsante play */
+  max-width: 500px;
+  margin-right: 20px;
+  position: relative;
+  bottom: 70px;
+  right: 70px;
 }
 
 .video-area video {
   width: 100%;
+}
+
+.play-button-container {
+  
   position: relative;
-  right: 100px;
-  bottom: 150px;
-  /* Adatta il video senza deformarlo */
+  bottom: 100px;
+  left: 50px;
+
 }
 
 .play-button-container img {
@@ -50,7 +57,7 @@ body {
   cursor: pointer;
   transition: transform 0.2s;
   position: relative;
-  bottom: 95px; /* Posiziona il pulsante sopra il video */
+  
 }
 
 .play-button-container img:hover {
@@ -149,10 +156,6 @@ body {
   transform: scale(1.1);
 }
 
-/* nasconde VideoPlayer per gli utenti iphone che usano Safari */
-video::-webkit-media-controls {
-  display: none !important;
-}
 
 
 /* Responsive per (430px) */
@@ -181,16 +184,19 @@ video::-webkit-media-controls {
     bottom: 100px;
   }
 
-  .video-area video {
+  .video-area img {
     width: 100%;
-    right: 0;
+    left: 75px;
     bottom: 0;
   }
 
   .play-button-container img {
     width: 30%;
-    bottom: 0;
-    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 60px;
+    top: 110px;
   }
 
   .banner {
