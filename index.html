@@ -4,7 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DJDANCEPETRTWORADIO</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon e icone -->
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="Images/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="Images/site.webmanifest" />
+    <meta name="msapplication-config" content="Images/browserconfig.xml" />
+
+    <!-- ogni volta che si modifica un file ricordarsi 
+     di sostituire il numero finale con un altro numero esempio: 1.0.7 diventa 1.0.8 e cosi via -->
+    <link rel="stylesheet" href="style.css?v=1.0.7"/> 
   </head>
   <body>
     <div class="container">
@@ -19,7 +44,7 @@
       <div class="media-container">
         <!-- Video turntable -->
         <div class="video-area">
-          <video id="mainVideo" src="media/main.mp4" loop muted></video>
+          <video id="mainVideo" src="media/main.mp4" loop muted playsinline webkit-playsinline preload="auto"></video>
         </div>
 
         <!-- Play Button -->
@@ -42,17 +67,49 @@
     </div>
 
     <div class="container-sponsors">
-      <img
-        src="Images/microphone-logo2.jpg"
-        alt="microphone-logo2"
-        class="microphone-logo2"
-      />
+      <div class="left-sponsor">
+        <a
+          class="link-sponsor"
+          href="https://www.radiofreelive.com/"
+          target="_blank"
+        >
+          <img
+            src="Images/microphone-logo2.jpg"
+            alt="microphone-logo2"
+            class="microphone-logo2"
+          />
+        </a>
+      </div>
+      <div class="right-sponsor">
+        <a
+          class="link-sponsor"
+          href="https://www.fabios.qa/menu_online.html"
+          target="_blank"
+        >
+          <img
+            src="Images/sponsor.jpg"
+            alt="sponsor"
+            class="restaurant-sponsor"
+          />
+        </a>
+      </div>
 
-      <img 
-      src="Images/sponsor.jpg" 
-      alt="sponsor" 
-      class="restaurant-sponsor" 
-      />
+      <!-- Rimossa il commento per aggiungere un altro sponsor
+      <div class="center-sponsor">
+        <a class="" href="" target="_blank">
+          <img
+            src=""
+            alt=""
+            class=""
+          />
+        </a>
+      </div>
+       -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 
     </div>
 
