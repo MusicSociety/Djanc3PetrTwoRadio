@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>ONEDANCERADIO</title>
+
+    <!-- Favicon e icone -->
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="Images/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="Images/android-chrome-512x512.png"
+    />
+    <link rel="manifest" href="Images/site.webmanifest" />
+    <meta name="msapplication-config" content="Images/browserconfig.xml" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.20" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Push to Listen sopra al bottone -->
+      <img
+        src="Images/PushToListen4.png"
+        alt="Push to Listen"
+        class="push-listen"
+      />
+
+      <!-- Video and Play Button Container -->
+      <div class="media-container">
+        <!-- Video turntable -->
+        <div class="video-area">
+          <img src="Images/Logo4.png" alt="Logo" class="video-area" />
+        </div>
+
+        <!-- Play Button -->
+        <div class="play-button-container">
+          <img src="Images/play4.png" alt="Play" id="playButton" />
+        </div>
+      </div>
+
+      <audio id="audioPlayer" preload="auto" loop>
+        <source
+          src="https://a2.asurahosting.com:6370/radio.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+
+    <div class="banner">
+      <img
+        src="Images/Banner2.png"
+        alt="ONE DANCE RADIO"
+        class="banner-image"
+      />
+    </div>
+</div>
+
+<!-- Icone social -->
+<div class="custom-social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61578849753865" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://x.com/OneDanceRa63587" target="_blank" aria-label="X">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a href="https://t.me/+kRMXQtb26sI5ZDAy" target="_blank" aria-label="Telegram">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+  <a href="https://whatsapp.com/channel/0029VbB5b9w9xVJn38TKnZ3L" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.instagram.com/one_dance_radio/" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.youtube.com/@OneDanceRadio" target="_blank" aria-label="YouTube">
+    <i class="fab fa-youtube"></i>
+  </a>
+  <a href="mailto:onedanceradio2@gmail.com" target="_blank" aria-label="E-mail">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+
+    <div class="equalizer-container" id="equalizer">
+    </div>
+
+
+    
+
+    <script src="script.js?v=1.0.20"></script>
+  </body>
+</html>

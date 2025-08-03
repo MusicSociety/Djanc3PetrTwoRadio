@@ -1,0 +1,337 @@
+/* Reset di base per il body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Push to Listen sopra al bottone */
+.push-listen {
+  position: relative;
+  width: 400px;
+  left: 27%;
+}
+
+/* Contenitore principale per il video e il pulsante play */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-area {
+  max-width: 500px;
+  margin-right: 20px;
+  position: relative;
+  bottom: 70px;
+  right: 70px;
+}
+
+.video-area video {
+  width: 100%;
+}
+
+.play-button-container {
+  position: relative;
+  bottom: 100px;
+  left: 50px;
+}
+
+.play-button-container img {
+  width: 110px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+#playButton.glow {
+  filter: drop-shadow(0 0 10px #c084fc);
+}
+
+.banner {
+  position: relative;
+  width: 98%;
+  height: auto;
+  margin-top: -150px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  position: relative;
+}
+
+.container-sponsors {
+  display: flex;
+  justify-content: space-between;
+  height: 102px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.right-sponsor,
+.left-sponsor {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-sponsor {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-sponsor {
+  width: 50%;
+  height: 95%;
+  position: relative;
+  bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.microphone-logo2 {
+  width: 50%;
+  height: 100%;
+  margin-top: 50px;
+  position: relative;
+  bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.logo-link {
+  width: 40%;
+  height: 110%;
+  position: relative;
+  bottom: 19px;
+  transition: transform 0.3s ease;
+}
+
+.link-sponsor {
+  text-decoration: none;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+}
+
+.microphone-logo2:hover,
+.restaurant-sponsor:hover,
+.logo-link:hover {
+  transform: scale(1.1);
+}
+
+.container-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.link-email {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.link-email:hover {
+  color: rgb(212, 0, 254);
+}
+
+.equalizer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  height: 100px;
+  margin-top: 40px;
+}
+
+.equalizer-bar {
+  width: 6px;
+  height: 8px;
+  background-color: purple;
+  border-radius: 3px;
+  transition: height 0.2s ease;
+}
+
+.equalizer-bar.animate {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 100px;
+  }
+}
+
+/* SOCIAL ICONS — Desktop + Mobile */
+.custom-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+
+.custom-social-icons a {
+  background-color: #000;
+  color: #d0a1e6; /* Viola chiaro */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-social-icons a:hover {
+  background-color: #5b2c82; /* Viola scuro */
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #d0a1e6, 0 0 12px #d0a1e6;
+}
+
+/* Responsive per schermi molto grandi */
+@media (min-width: 1920px) {
+  .logo-link {
+    width: 30%;
+    height: 120%;
+    position: relative;
+    bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .link-email {
+    font-size: 35px;
+    margin-top: 100px;
+  }
+}
+
+/* Responsive per schermi piccoli (max 430px) */
+@media screen and (max-width: 430px) {
+  .push-listen {
+    width: 80%;
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 210px;
+  }
+
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .video-area {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    bottom: 100px;
+  }
+
+  .video-area img {
+    width: 100%;
+    left: 75px;
+    bottom: 0;
+  }
+
+  .play-button-container img {
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 59px;
+    top: 110px;
+  }
+
+  .banner {
+    margin-top: 10px;
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .container-sponsors {
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .right-sponsor,
+  .left-sponsor,
+  .center-sponsor {
+    width: 60%;
+    height: auto;
+  }
+
+  .microphone-logo2,
+  .restaurant-sponsor,
+  .logo-link {
+    width: 70%;
+    height: auto;
+    position: static;
+  }
+
+  .link-sponsor {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-email {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .link-email {
+    font-size: 15px;
+  }
+
+  .custom-social-icons a {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+}
